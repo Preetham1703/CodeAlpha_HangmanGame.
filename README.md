@@ -2,14 +2,14 @@
 
 import random
 
-def select_random_word():
+    def select_random_word():
     words = ["coding", "internship", "opportunity", "openai", "codealpha", "develope", "challenge"]
     return random.choice(words)
 
-def display_word(word, guessed_letters):
+    def display_word(word, guessed_letters):
     return " ".join([letter if letter in guessed_letters else "_" for letter in word])
 
-def play_hangman():
+    def play_hangman():
     word = select_random_word()
     guessed_letters = set()
     incorrect_guesses = 0
@@ -44,5 +44,5 @@ def play_hangman():
         if incorrect_guesses == max_incorrect_guesses:
             print(f"Game Over! The word was: {word}")
 
-if __name__ == "__main__":
-    play_hangman()
+    if __name__ == "__main__":
+        play_hangman()
